@@ -2,8 +2,8 @@ CC = gcc
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-INCLUDES = -I$(LIB_PATH)/libpcap/include
-LIBPATH = -L$(LIB_PATH)/libpcap/lib
+INCLUDES = -I$(LIB_PATH)/include
+LIBPATH = -L$(LIB_PATH)/lib
 
 CFLAGS = -g -O2
 
