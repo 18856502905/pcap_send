@@ -70,6 +70,9 @@ fi
 
 cd ${SRC_PATH}
 
+if [ ${CLEAN} == "y" ];then
+	${MAKE} clean LIB_PATH=${LIBPCAP_PATH} SEND_PATH=${SEND_PATH}
+fi
 
 ${MAKE} LIB_PATH=${LIBPCAP_PATH} SEND_PATH=${SEND_PATH}
 

@@ -107,6 +107,7 @@ bool log_show()
 		gettimeofday(&tv_count, NULL);
 		tv_usec = tv_count.tv_usec;
 		int32_t pre_usec;
+		localtime_r(&tv_count.tv_sec, &datetime);
 		strftime(tbuf_HMS, 16, "%H:%M:%S", &datetime);
 
 		if(sec_time_var != tv_count.tv_sec)

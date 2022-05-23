@@ -25,6 +25,10 @@ default: obj
 EXE = $(SEND_PATH)/bin/pcap_send
 ALLOBJS = $(wildcard $(SEND_PATH)/src/*.o)
 
+clean:
+	rm -rf $(ALLOBJS)
+	rm -rf $(EXE)
+
 link:
 	$(CC) -o $(EXE) $(ALLOBJS) $(LIBPATH) $(LIBS)
 	
