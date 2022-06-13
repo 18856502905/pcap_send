@@ -17,6 +17,9 @@ typedef struct _PCAP_CONF
 	int   	  pcap_bind_cpu[MAX_CPU_CORE];
 
 	uint8_t   dpdk_enable;
+	uint8_t	  dpdk_cpu_num;
+	int		  dpdk_bind_cpu[MAX_CPU_CORE];
+	
 
 	_PCAP_CONF(){
 		pcap_enable = 1;

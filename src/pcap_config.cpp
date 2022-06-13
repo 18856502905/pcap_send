@@ -122,11 +122,21 @@ bool get_config()
             }
 		}
 
-
-		else if(!strcasecmp(key, "pcap_dev_name") && value)
+		else if(!strcasecmp(key, "dpdk_enable") && value)
 		{
 			p_conf.dpdk_enable = atoi(value);
 		}
+		else if(!strcasecmp(key, "dpdk_bind_core") && value)
+		{
+			if (!cpulist_anal("dpdk_bind_core", value,
+                       p_conf.dpdk_cpu_num, p_conf.dpdk_bind_cpu))
+            {
+                fclose(cf_fp);
+                return false;
+            }
+		}
+
+
 	}
 	return true;
 }

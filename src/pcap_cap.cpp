@@ -55,7 +55,7 @@ bool cap_send::set_file_list()
 		dir = opendir(p_conf.pcap_file_name);
 		if(!dir)
 		{
-			printf("Error:faileld to open cap path '%s'\n", p_conf.pcap_file_name);
+			printf("faileld to open cap path '%s'\n", p_conf.pcap_file_name);
 			return false;
 		}
 		while(NULL != (ent = readdir(dir)))
