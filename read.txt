@@ -1,7 +1,2 @@
 hello world 111
-<<<<<<< HEAD
-hello world 222
-hello world 333
-=======
 hello world
->>>>>>> parent of a57f8e5 (huigun2)
